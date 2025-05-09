@@ -28,9 +28,11 @@ This video showcases the Workflow Management interface in action, demonstrating 
 ├── uninstall_qe_wf.sh       # Uninstallation script
 ├── wf-tech-doc.md           # Technical documentation
 ├── .env.template            # Environment variables template
-├── videos/                  # Showcase video demonstrations
-│   ├── kg_compressed.mp4   # Knowledge Graph interface demo
-│   └── wf_compressed.mp4   # Workflow interface demo
+├── videos/                  # Video demonstrations
+│   ├── kg_compressed.mp4    # Knowledge Graph interface demo (compressed)
+│   ├── kg_thumbnail.jpg     # Knowledge Graph demo thumbnail
+│   ├── wf_compressed.mp4    # Workflow interface demo (compressed)
+│   └── wf_thumbnail.jpg     # Workflow demo thumbnail
 ├── eng/                     # Engineering core components
 │   ├── interfaces/          # API and interface definitions
 │   ├── fsm/                # Finite State Machine implementation
@@ -41,8 +43,12 @@ This video showcases the Workflow Management interface in action, demonstrating 
 │   └── wf_app.html         # Workflow application interface
 ├── static/                 # Static assets for web interface
 ├── total results/          # Output storage directory
-├── new_pp/                 # Pseudopotential directory
-└── analysis/              # Analysis tools and results
+│   ├── concat_json/       # JSON format results
+│   └── concat_png/        # PNG format results
+├── new_pp/                # Pseudopotential directory
+└── analysis/             # Analysis tools and results
+    ├── embeddings/       # Embedding analysis
+    └── som/             # Self-organizing maps
 ```
 
 ## Components
