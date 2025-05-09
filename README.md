@@ -7,13 +7,13 @@ This is a Quantum Engineering (QE) Workflow Management System that provides a we
 
 ### Knowledge Graph Interface Demo
 
-[▶️ Watch Knowledge Graph Demo (kg_compressed.mov)](videos/kg_compressed.mov)
+[▶️ Watch Knowledge Graph Demo (kg_compressed.mp4)](videos/kg_compressed.mp4)
 
 This video demonstrates the Knowledge Graph interface, showing how the system organizes and visualizes quantum engineering workflows using a graph-based approach.
 
 ### Workflow Management Demo
 
-[▶️ Watch Workflow Demo (wf_compressed.mov)](videos/wf_compressed.mov)
+[▶️ Watch Workflow Demo (wf_compressed.mp4)](videos/wf_compressed.mp4)
 
 This video showcases the Workflow Management interface in action, demonstrating how users can create, manage, and execute quantum engineering workflows through the web interface.
 
@@ -29,8 +29,8 @@ This video showcases the Workflow Management interface in action, demonstrating 
 ├── wf-tech-doc.md           # Technical documentation
 ├── .env.template            # Environment variables template
 ├── videos/                  # Showcase video demonstrations
-│   ├── kg.mov              # Knowledge Graph interface demo
-│   └── wf.mov              # Workflow interface demo
+│   ├── kg_compressed.mp4   # Knowledge Graph interface demo
+│   └── wf_compressed.mp4   # Workflow interface demo
 ├── eng/                     # Engineering core components
 │   ├── interfaces/          # API and interface definitions
 │   ├── fsm/                # Finite State Machine implementation
