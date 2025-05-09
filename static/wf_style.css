@@ -1,0 +1,35 @@
+/* Custom styles beyond Tailwind */
+.json-error {
+    border-color: red;
+}
+
+/* Add any additional custom styles here */
+body {
+    background: linear-gradient(135deg, #3cdf9e 0%, #6a68f3 100%);
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #f8fafc;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#jsonContent {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    line-height: 1.5;
+    tab-size: 2;
+    -moz-tab-size: 2;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-size: 0.875rem;
+}
+
+#jsonPanel {
+    transition: transform 0.3s ease-in-out;
+    z-index: 50;
+}
+
+#jsonPanel:hover {
+    transform: translateX(0) !important;
+}

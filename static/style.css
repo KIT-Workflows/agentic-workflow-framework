@@ -1,0 +1,66 @@
+.widget-text input, .widget-textarea textarea {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.widget-text input:focus, .widget-textarea textarea:focus {
+    border-color: #2196F3;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.2);
+    outline: none;
+}
+
+.widget-button button {
+    background-color: #2196F3;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.widget-button button:hover {
+    background-color: #1976D2;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.3);
+    transform: translateY(-1px);
+}
+
+.remove-button button {
+    background-color: #ff5252;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.remove-button button:hover {
+    background-color: #d32f2f;
+}
+
+.save-button button {
+    background-color: #4CAF50;
+}
+
+.save-button button:hover {
+    background-color: #388E3C;
+}
+
+.export-button button {
+    background-color: #9C27B0;
+}
+
+.export-button button:hover {
+    background-color: #7B1FA2;
+}
+
+.sidebar {
+    background-color: #f5f5f5;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

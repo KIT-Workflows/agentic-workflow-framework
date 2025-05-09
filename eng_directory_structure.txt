@@ -1,0 +1,91 @@
+eng/
+├── __init__.py
+├── __pycache__
+│   ├── __init__.cpython-310.pyc
+│   └── __init__.cpython-311.pyc
+├── assets
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── assets_collection.cpython-310.pyc
+│   │   ├── assets_collection.cpython-311.pyc
+│   │   ├── graph_engine.cpython-311.pyc
+│   │   └── text_prompt.cpython-311.pyc
+│   ├── assets_collection.py
+│   ├── graph_engine.py
+│   ├── mc2d_2.json
+│   ├── mc2d.json
+│   ├── mc3d.json
+│   ├── quantum_conditions.json
+│   ├── sg_dict.json
+│   ├── SSSP_1.3.0_PBE_efficiency.json
+│   ├── text_prompt.py
+│   ├── text_styling.json
+│   ├── tokenizers
+│   │   ├── databricks
+│   │   │   └── dbrx-instruct
+│   │   │       ├── special_tokens_map.json
+│   │   │       ├── tokenizer_config.json
+│   │   │       └── tokenizer.json
+│   │   └── meta-llama
+│   │       ├── Llama-3.1-405B-Instruct
+│   │       │   ├── special_tokens_map.json
+│   │       │   ├── tokenizer_config.json
+│   │       │   └── tokenizer.json
+│   │       └── Llama-3.1-70B-Instruct
+│   │           ├── special_tokens_map.json
+│   │           ├── tokenizer_config.json
+│   │           └── tokenizer.json
+│   └── xqe_univ_kg_load_v1.json
+├── core
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── project_config.cpython-311.pyc
+│   │   ├── qr_doc_engine.cpython-311.pyc
+│   │   ├── qr_engine.cpython-311.pyc
+│   │   ├── qr_project_engine.cpython-311.pyc
+│   │   └── tag_finder.cpython-311.pyc
+│   ├── project_config.py
+│   ├── qe_slurm_template.sh
+│   ├── qr_doc_engine.py
+│   ├── qr_engine.py
+│   ├── qr_project_engine.py
+│   └── tag_finder.py
+├── eng_directory_structure.txt
+├── fsm
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── state_machine_module.cpython-310.pyc
+│   │   ├── state_machine_module.cpython-311.pyc
+│   │   ├── visualization_module.cpython-310.pyc
+│   │   └── visualization_module.cpython-311.pyc
+│   ├── finite-state-machine-package.txt
+│   ├── new_state.py
+│   ├── pyproject-toml.txt
+│   ├── readme-md.md
+│   ├── state_machine_module.py
+│   └── visualization_module.py
+└── interfaces
+    ├── __init__.py
+    ├── __pycache__
+    │   ├── __init__.cpython-310.pyc
+    │   ├── __init__.cpython-311.pyc
+    │   ├── conda_path.cpython-311.pyc
+    │   ├── lil_wrapper.cpython-311.pyc
+    │   ├── llms_engine.cpython-310.pyc
+    │   ├── llms_engine.cpython-311.pyc
+    │   ├── qr_input.cpython-311.pyc
+    │   ├── workflow_api.cpython-311.pyc
+    │   └── workflow_backend.cpython-311.pyc
+    ├── conda_path.py
+    ├── lil_wrapper.py
+    ├── llms_engine.py
+    ├── qr_input.py
+    ├── workflow_api.py
+    └── workflow_backend.py
+
+16 directories, 73 files

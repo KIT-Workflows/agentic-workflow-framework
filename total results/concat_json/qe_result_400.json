@@ -1,0 +1,1002 @@
+[
+    {
+        "project_signature": "test",
+        "calculation_description": "Calculate a single shot calculation for VO3 using all default parameters of QE code.",
+        "analysis_dict": {
+            "description": "Calculate a single shot calculation for VO3 using all default parameters of QE code.",
+            "formula": "VO3",
+            "database": "mc3d"
+        },
+        "get_conditions_prompts": [
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nAnalyze the given calculation description and tag list to extract and categorize relevant information.\n\n<CALCULATION_DESCRIPTION>\nCalculate a single shot calculation for VO3 using all default parameters of QE code.\n</CALCULATION_DESCRIPTION>\n\n<TAGS>\nCalculation_types\n- Berry phase calculations\n- Constant bias potential calculations\n- DOS calculations\n- Dynamical Mean Field Theory\n- Dynamics calculations\n- ESM calculations\n- FCP calculations\n- GC-SCF calculations\n- Ground state calculations\n- HP code calculations\n- LDA+U calculations\n- Linear-response calculations\n- Relaxation calculations\n- Two-chemical-potential calculations\n- calculation = 'bands'\n- calculation = 'md'\n- calculation = 'nscf'\n- calculation = 'relax'\n- calculation = 'scf'\n- calculation = 'vc-md'\n- calculation = 'vc-relax'\n- charge density calculations\n- dispersion correction calculations\n- stress calculations\n- total energy calculations\n</TAGS>\n\n<RULES>\n- Extract only information explicitly mentioned in the documentation. Look for specific keywords, parameters, and context clues.\n- Tags must be Quantum ESPRESSO specific parameters or keywords. Use the provided list of known tags as a reference.\n- Determine tag relevance based on direct applicability to the calculation description. Consider the context and purpose of the calculation.\n- Irrelevant tags are those that don't apply to the current calculation type or context.\n- Final comments should focus on potential issues, common pitfalls, or important considerations related to the calculation.\n- Ensure all extracted information maintains technical accuracy and relevance.\n\n<OUTPUT_FORMAT>\nCreate a Python dictionary named 'extracted_info' with these keys and descriptions:\n   - Calculation_description (str, description of the calculation)\n   - Relevant_tags (list[str], relevant tags for the calculation)\n   - Irrelevant_tags (list[str], tags that are not relevant for the calculation)\n   - Final_comments (str, final comments)\n\nPlace the dictionary between ```python and ``` markers. \n</OUTPUT_FORMAT>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nAnalyze the given calculation description and tag list to extract and categorize relevant information.\n\n<CALCULATION_DESCRIPTION>\nCalculate a single shot calculation for VO3 using all default parameters of QE code.\n</CALCULATION_DESCRIPTION>\n\n<TAGS>\nFunctional_and_method_types\n- BEEF-type functionals\n- Conjugate gradient diagonalization\n- Davidson diagonalization\n- PPCG diagonalization\n- Paro diagonalization\n- RMM-DIIS diagonalization\n- DFT-D calculations\n- DFT-D2 calculations\n- DFT-D3 calculations\n- Exact exchange calculations\n- Exchange-correlation functional\n- Exchange-hole dipole-moment model\n- Gradient-corrected functionals\n- Hybrid functional calculations\n- Hybrid functionals with exact exchange\n- Many-body dispersion (MBD) corrections\n- Parrinello-Rahman MD\n- Scissor operator corrections\n- Tkatchenko-Scheffler dispersion corrections\n- Wentzcovitch MD\n- functional is NOT one of: B86bPBE, PW86PBE, PBE, BLYP\n- gammaDFT calculations\n- input_dft='PBE0', 'B3LYP'\n- ion_dynamics = 'bfgs'\n- ion_dynamics = 'fire'\n- ion_dynamics = 'verlet'\n- ion_dynamics = 'damp'\n- long-range interactions\n- Non-collinear calculations\n- spin-orbit calculations\n</TAGS>\n\n<RULES>\n- Extract only information explicitly mentioned in the documentation. Look for specific keywords, parameters, and context clues.\n- Tags must be Quantum ESPRESSO specific parameters or keywords. Use the provided list of known tags as a reference.\n- Determine tag relevance based on direct applicability to the calculation description. Consider the context and purpose of the calculation.\n- Irrelevant tags are those that don't apply to the current calculation type or context.\n- Final comments should focus on potential issues, common pitfalls, or important considerations related to the calculation.\n- Ensure all extracted information maintains technical accuracy and relevance.\n\n<OUTPUT_FORMAT>\nCreate a Python dictionary named 'extracted_info' with these keys and descriptions:\n   - Calculation_description (str, description of the calculation)\n   - Relevant_tags (list[str], relevant tags for the calculation)\n   - Irrelevant_tags (list[str], tags that are not relevant for the calculation)\n   - Final_comments (str, final comments)\n\nPlace the dictionary between ```python and ``` markers. \n</OUTPUT_FORMAT>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nAnalyze the given calculation description and tag list to extract and categorize relevant information.\n\n<CALCULATION_DESCRIPTION>\nCalculate a single shot calculation for VO3 using all default parameters of QE code.\n</CALCULATION_DESCRIPTION>\n\n<TAGS>\nCell_and_material_properties\n- 2D periodic systems in x-y plane\n- Anisotropic supercells\n- Bravais lattice structure (values 0 to 14)\n- Correlated orbitals\n- Cubic supercells\n- DOS of materials\n- Fixed cell calculations\n- Framework/porous systems\n- Hard FFT grid\n- High symmetry systems\n- Insulating systems\n- Low-symmetry large cells\n- Materials like graphite\n- Materials with long-range interaction\n- Metallic systems\n- Monoclinic systems\n- Non-periodic systems\n- Periodic systems\n- Quasi-cubic supercells\n- Rare Earth Elements\n- Semiconductor systems\n- Slab systems\n- Smooth FFT grid\n- Strongly correlated electrons\n- Transition Metals\n- Variable cell calculations\n- charged cells\n- homogeneous systems\n- ibrav = -12\n- ibrav = -13\n- ibrav-defined crystal structure\n- ibrav = 5\n- ibrav = 0\n- inhomogeneous systems\n- non-symmorphic symmetry operations\n- periodic cell with defined z-direction\n- rhombohedral space group\n- single atom/isolated systems\n- symmetry-defined crystal structure\n- variable cell calculations\n</TAGS>\n\n<RULES>\n- Extract only information explicitly mentioned in the documentation. Look for specific keywords, parameters, and context clues.\n- Tags must be Quantum ESPRESSO specific parameters or keywords. Use the provided list of known tags as a reference.\n- Determine tag relevance based on direct applicability to the calculation description. Consider the context and purpose of the calculation.\n- Irrelevant tags are those that don't apply to the current calculation type or context.\n- Final comments should focus on potential issues, common pitfalls, or important considerations related to the calculation.\n- Ensure all extracted information maintains technical accuracy and relevance.\n\n<OUTPUT_FORMAT>\nCreate a Python dictionary named 'extracted_info' with these keys and descriptions:\n   - Calculation_description (str, description of the calculation)\n   - Relevant_tags (list[str], relevant tags for the calculation)\n   - Irrelevant_tags (list[str], tags that are not relevant for the calculation)\n   - Final_comments (str, final comments)\n\nPlace the dictionary between ```python and ``` markers. \n</OUTPUT_FORMAT>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nAnalyze the given calculation description and tag list to extract and categorize relevant information.\n\n<CALCULATION_DESCRIPTION>\nCalculate a single shot calculation for VO3 using all default parameters of QE code.\n</CALCULATION_DESCRIPTION>\n\n<TAGS>\nPseudopotential_types\n- PAW sets\n- Pseudopotentials with Hubbard occupation\n- Relativistic pseudopotentials\n- UPF pseudopotentials\n- Ultrasoft pseudopotentials\n- nonlocal pseudopotentials\n- norm-conserving pseudopotentials\n- pseudopotential tables\n- pseudopotentials with spin-orbit coupling\n</TAGS>\n\n<RULES>\n- Extract only information explicitly mentioned in the documentation. Look for specific keywords, parameters, and context clues.\n- Tags must be Quantum ESPRESSO specific parameters or keywords. Use the provided list of known tags as a reference.\n- Determine tag relevance based on direct applicability to the calculation description. Consider the context and purpose of the calculation.\n- Irrelevant tags are those that don't apply to the current calculation type or context.\n- Final comments should focus on potential issues, common pitfalls, or important considerations related to the calculation.\n- Ensure all extracted information maintains technical accuracy and relevance.\n\n<OUTPUT_FORMAT>\nCreate a Python dictionary named 'extracted_info' with these keys and descriptions:\n   - Calculation_description (str, description of the calculation)\n   - Relevant_tags (list[str], relevant tags for the calculation)\n   - Irrelevant_tags (list[str], tags that are not relevant for the calculation)\n   - Final_comments (str, final comments)\n\nPlace the dictionary between ```python and ``` markers. \n</OUTPUT_FORMAT>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nAnalyze the given calculation description and tag list to extract and categorize relevant information.\n\n<CALCULATION_DESCRIPTION>\nCalculate a single shot calculation for VO3 using all default parameters of QE code.\n</CALCULATION_DESCRIPTION>\n\n<TAGS>\nMagnetism_and_Spin_conditions\n- Collinear magnetic calculations (LSDA)\n- Collinear spin\n- Constrained magnetization\n- Initial magnetization\n- Magnetic systems\n- Non-collinear magnetic calculations\n- Spin-orbit coupling\n- Spin-polarized calculations\n- lspinorb = .True.\n- nspin = 1\n- nspin = 2\n- starting_magnetization=0.0\n</TAGS>\n\n<RULES>\n- Extract only information explicitly mentioned in the documentation. Look for specific keywords, parameters, and context clues.\n- Tags must be Quantum ESPRESSO specific parameters or keywords. Use the provided list of known tags as a reference.\n- Determine tag relevance based on direct applicability to the calculation description. Consider the context and purpose of the calculation.\n- Irrelevant tags are those that don't apply to the current calculation type or context.\n- Final comments should focus on potential issues, common pitfalls, or important considerations related to the calculation.\n- Ensure all extracted information maintains technical accuracy and relevance.\n\n<OUTPUT_FORMAT>\nCreate a Python dictionary named 'extracted_info' with these keys and descriptions:\n   - Calculation_description (str, description of the calculation)\n   - Relevant_tags (list[str], relevant tags for the calculation)\n   - Irrelevant_tags (list[str], tags that are not relevant for the calculation)\n   - Final_comments (str, final comments)\n\nPlace the dictionary between ```python and ``` markers. \n</OUTPUT_FORMAT>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nAnalyze the given calculation description and tag list to extract and categorize relevant information.\n\n<CALCULATION_DESCRIPTION>\nCalculate a single shot calculation for VO3 using all default parameters of QE code.\n</CALCULATION_DESCRIPTION>\n\n<TAGS>\nIsolated_systems_and_boundary_conditions\n- Dielectric environment\n- Isolated (non-periodic) systems\n- Laue boundary conditions\n- Laue-RISM calculations\n- Systems using Reference Interaction Site Model (RISM)\n- Systems with solvent regions\n- Systems with solvent-solute interactions\n- assume_isolated must be set to 'esm'\n- charged slabs\n- constant chemical potential conditions\n- electrode boundaries\n- laue_wall != 'none'\n- vacuum boundaries\n</TAGS>\n\n<RULES>\n- Extract only information explicitly mentioned in the documentation. Look for specific keywords, parameters, and context clues.\n- Tags must be Quantum ESPRESSO specific parameters or keywords. Use the provided list of known tags as a reference.\n- Determine tag relevance based on direct applicability to the calculation description. Consider the context and purpose of the calculation.\n- Irrelevant tags are those that don't apply to the current calculation type or context.\n- Final comments should focus on potential issues, common pitfalls, or important considerations related to the calculation.\n- Ensure all extracted information maintains technical accuracy and relevance.\n\n<OUTPUT_FORMAT>\nCreate a Python dictionary named 'extracted_info' with these keys and descriptions:\n   - Calculation_description (str, description of the calculation)\n   - Relevant_tags (list[str], relevant tags for the calculation)\n   - Irrelevant_tags (list[str], tags that are not relevant for the calculation)\n   - Final_comments (str, final comments)\n\nPlace the dictionary between ```python and ``` markers. \n</OUTPUT_FORMAT>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nAnalyze the given calculation description and tag list to extract and categorize relevant information.\n\n<CALCULATION_DESCRIPTION>\nCalculate a single shot calculation for VO3 using all default parameters of QE code.\n</CALCULATION_DESCRIPTION>\n\n<TAGS>\nk_point_settings\n- Automatic k-points\n- Monkhorst-Pack grid\n- Non-automatic k-points\n- Single k-point\n- Uniform k-point grid\n- custom k-points\n- full BZ coverage\n- nosym k-points\n</TAGS>\n\n<RULES>\n- Extract only information explicitly mentioned in the documentation. Look for specific keywords, parameters, and context clues.\n- Tags must be Quantum ESPRESSO specific parameters or keywords. Use the provided list of known tags as a reference.\n- Determine tag relevance based on direct applicability to the calculation description. Consider the context and purpose of the calculation.\n- Irrelevant tags are those that don't apply to the current calculation type or context.\n- Final comments should focus on potential issues, common pitfalls, or important considerations related to the calculation.\n- Ensure all extracted information maintains technical accuracy and relevance.\n\n<OUTPUT_FORMAT>\nCreate a Python dictionary named 'extracted_info' with these keys and descriptions:\n   - Calculation_description (str, description of the calculation)\n   - Relevant_tags (list[str], relevant tags for the calculation)\n   - Irrelevant_tags (list[str], tags that are not relevant for the calculation)\n   - Final_comments (str, final comments)\n\nPlace the dictionary between ```python and ``` markers. \n</OUTPUT_FORMAT>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nAnalyze the given calculation description and tag list to extract and categorize relevant information.\n\n<CALCULATION_DESCRIPTION>\nCalculate a single shot calculation for VO3 using all default parameters of QE code.\n</CALCULATION_DESCRIPTION>\n\n<TAGS>\nElectric_field_conditions\n- 0 < emaxpos < 1\n- Kubo terms\n- System with electric field\n- block = .TRUE.\n- dielectrically consistent RISM (DRISM)\n- dipfield = .TRUE.\n- gate = .TRUE.\n- lelfield = .TRUE.\n- lfcp = .TRUE.\n- optional electric field\n- tefield = .TRUE.\n</TAGS>\n\n<RULES>\n- Extract only information explicitly mentioned in the documentation. Look for specific keywords, parameters, and context clues.\n- Tags must be Quantum ESPRESSO specific parameters or keywords. Use the provided list of known tags as a reference.\n- Determine tag relevance based on direct applicability to the calculation description. Consider the context and purpose of the calculation.\n- Irrelevant tags are those that don't apply to the current calculation type or context.\n- Final comments should focus on potential issues, common pitfalls, or important considerations related to the calculation.\n- Ensure all extracted information maintains technical accuracy and relevance.\n\n<OUTPUT_FORMAT>\nCreate a Python dictionary named 'extracted_info' with these keys and descriptions:\n   - Calculation_description (str, description of the calculation)\n   - Relevant_tags (list[str], relevant tags for the calculation)\n   - Irrelevant_tags (list[str], tags that are not relevant for the calculation)\n   - Final_comments (str, final comments)\n\nPlace the dictionary between ```python and ``` markers. \n</OUTPUT_FORMAT>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nAnalyze the given calculation description and tag list to extract and categorize relevant information.\n\n<CALCULATION_DESCRIPTION>\nCalculate a single shot calculation for VO3 using all default parameters of QE code.\n</CALCULATION_DESCRIPTION>\n\n<TAGS>\nOccupation_types\n- Fixed occupations\n- Smearing method\n- Grand canonical ensemble\n- Linear tetrahedron method\n- Optimized tetrahedron method\n- DFT+U Hubbard correction\n- DFT+U+V Hubbard correction\n- DFT+U+J Hubbard correction\n- Systems with empty states\n- Tetrahedron method (Bloechl's version)\n- occupations = 'from_input'\n- occupations = 'smearing'\n- partial occupations\n- valence and conduction manifolds\n</TAGS>\n\n<RULES>\n- Extract only information explicitly mentioned in the documentation. Look for specific keywords, parameters, and context clues.\n- Tags must be Quantum ESPRESSO specific parameters or keywords. Use the provided list of known tags as a reference.\n- Determine tag relevance based on direct applicability to the calculation description. Consider the context and purpose of the calculation.\n- Irrelevant tags are those that don't apply to the current calculation type or context.\n- Final comments should focus on potential issues, common pitfalls, or important considerations related to the calculation.\n- Ensure all extracted information maintains technical accuracy and relevance.\n\n<OUTPUT_FORMAT>\nCreate a Python dictionary named 'extracted_info' with these keys and descriptions:\n   - Calculation_description (str, description of the calculation)\n   - Relevant_tags (list[str], relevant tags for the calculation)\n   - Irrelevant_tags (list[str], tags that are not relevant for the calculation)\n   - Final_comments (str, final comments)\n\nPlace the dictionary between ```python and ``` markers. \n</OUTPUT_FORMAT>\n\nMake sure to follow the rules and provide the output in the specified format.\n"
+        ],
+        "condition_tables": "                                       Item  ...                                     Final_comments\n0                         Calculation_types  ...  The calculation is a single shot calculation, ...\n1               Functional_and_method_types  ...  The calculation description does not specify t...\n2              Cell_and_material_properties  ...  The calculation is a single shot calculation f...\n3                     Pseudopotential_types  ...  Since the calculation is using all default par...\n4             Magnetism_and_Spin_conditions  ...  The calculation is set to use default paramete...\n5  Isolated_systems_and_boundary_conditions  ...  The calculation description does not provide e...\n6                          k_point_settings  ...  Since the calculation description specifies th...\n7                 Electric_field_conditions  ...  The calculation description does not mention a...\n8                          Occupation_types  ...  Since the calculation is using all default par...\n\n[9 rows x 4 columns]",
+        "relevant_conditions": [
+            "Gradient-corrected functionals",
+            "ultrasoft pseudopotentials",
+            "ion_dynamics = 'damp'",
+            "norm-conserving pseudopotentials",
+            "Exchange-correlation functional",
+            "ion_dynamics = 'bfgs'",
+            "occupations = 'from_input'",
+            "Fixed occupations",
+            "starting_magnetization=0.0",
+            "ion_dynamics = 'fire'",
+            "Hybrid functional calculations",
+            "input_dft='PBE0', 'B3LYP'",
+            "nspin = 2",
+            "Transition Metals",
+            "lspinorb = .True.",
+            "calculation = 'scf'",
+            "Hybrid functionals with exact exchange",
+            "nspin = 1",
+            "Ground state calculations",
+            "DFT+U+J Hubbard correction",
+            "Periodic systems",
+            "ion_dynamics = 'verlet'",
+            "ibrav-defined crystal structure",
+            "DFT+U+V Hubbard correction",
+            "charge density calculations",
+            "UPF pseudopotentials",
+            "High symmetry systems",
+            "Fixed cell calculations",
+            "DFT+U Hubbard correction",
+            "total energy calculations"
+        ],
+        "parameter_evaluation_prompts": [
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"upscale\"\nDefault_Values:\n{\n  default:\n\"100.D0\"\n}\nDescription:\n\"upscale\nMax reduction factor for 'conv_thr' during structural optimization\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"w_1\"\nDefault_Values:\n{\n  default:\n\"0.01D0\"\n}\nDescription:\n\"w_1\nParameters used in line search based on the Wolfe conditions.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"ion_positions\"\nDefault_Values:\n{\n  default:\n\"default\"\n}\nDescription:\n\"ion_positions\nControls how atomic positions are determined, either from restart file or standard input depending on the option chosen\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n]\nUsage_Conditions:\n\"\"\nParameter_Value_Conditions:\n{\n  default:\n\"if restarting, use atomic positions read from the restart file; in all other cases, use atomic positions from standard input\"\n  from_input:\n\"read atomic positions from standard input, even if restarting\"\n}\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"trust_radius_ini\"\nDefault_Values:\n{\n  default:\n\"0.5D0\"\n}\nDescription:\n\"trust_radius_ini\nInitial ionic displacement in the structural relaxation.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"trust_radius_min\"\nDefault_Values:\n{\n  default:\n\"1.D-3\"\n}\nDescription:\n\"trust_radius_min\nMinimum ionic displacement in the structural relaxation\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions:\n{\n  trust_radius < trust_radius_min:\n\"BFGS is reset\"\n}\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"nr1, nr2, nr3\"\nDefault_Values:\n{\n  default: None\n}\nDescription:\n\"nr1, nr2, nr3\nThree-dimensional FFT mesh (hard grid) for charge density (and scf potential)\"\nPossible_Usage_Conditions: [\n  charge density calculations,\n  Hard FFT grid,\n]\nUsage_Conditions:\n\"If not specified the grid is calculated based on the cutoff for charge density (see also ecutrho)\"\nParameter_Value_Conditions: None\nFinal_comments:\n\"all three dimensions should be set, to use this parameter\"\nNamelist:\n\"&SYSTEM\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"ntyp\"\nDefault_Values:\n{\n  default: None\n}\nDescription:\n\"ntyp\nnumber of types of atoms in the unit cell\"\nPossible_Usage_Conditions: [\n]\nUsage_Conditions: None\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&SYSTEM\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"calculation\"\nDefault_Values:\n{\n  default:\n\"scf\"\n}\nDescription:\n\"calculation\nA string describing the task to be performed\"\nPossible_Usage_Conditions: [\n  calculation = 'scf',\n  calculation = 'nscf',\n  calculation = 'bands',\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  Fixed cell calculations,\n  Variable cell calculations,\n]\nUsage_Conditions: None\nParameter_Value_Conditions:\n{\n  scf:\n\"standard calculation\"\n  nscf: None\n  bands: None\n  relax:\n\"only the atomic positions are allowed to vary\"\n  md:\n\"ab-initio molecular dynamics (MD) simulations\"\n  vc-relax:\n\"allows to vary both the atomic positions and lattice constants\"\n  vc-md:\n\"molecular dynamics (MD) simulations, vary both the atomic positions and lattice constants (vc = variable-cell)\"\n}\nFinal_comments: None\nNamelist:\n\"&CONTROL\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"fcp_mu\"\nDefault_Values:\n{\n  default: None\n}\nDescription:\n\"fcp_mu\nThe target Fermi energy (eV). Fictitious Charge Particle (FCP) The FCP method introduces a fictitious particle with an assigned charge to facilitate simulations under constant chemical potential conditions.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  FCP calculations,\n  constant chemical potential conditions,\n]\nUsage_Conditions:\n\"Only if lfcp = .TRUE.\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&FCP\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"fire_f_dec\"\nDefault_Values:\n{\n  default:\n\"0.5D0\"\n}\nDescription:\n\"fire_f_dec\nFactor for decreasing 'dt'\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'fire',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'fire'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"conv_thr\"\nDefault_Values:\n{\n  default:\n\"1.D-6\"\n}\nDescription:\n\"conv_thr\nConvergence threshold for selfconsistency, estimated energy error < conv_thr (note that conv_thr is extensive, like the total energy)\"\nPossible_Usage_Conditions: [\n  calculation = 'scf',\n  calculation = 'nscf',\n]\nUsage_Conditions:\n\"Used in self-consistent calculations ('scf') for convergence threshold. For non-self-consistent calculations ('nscf'), used to set default threshold value for iterative diagonalization\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&ELECTRONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"fire_f_inc\"\nDefault_Values:\n{\n  default:\n\"1.1D0\"\n}\nDescription:\n\"fire_f_inc\nFactor for increasing 'dt'\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'fire',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'fire'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"Hubbard_alpha\"\nDefault_Values:\n{\n  default:\n\"0.D0 for all species\"\n}\nDescription:\n\"Hubbard_alpha(i), i=1,ntyp\nHubbard_alpha(i) is the perturbation (on atom i, in eV) used to compute U (and V) with the linear-response method.\"\nPossible_Usage_Conditions: [\n  Linear-response calculations,\n  HP code calculations,\n  DFT+U Hubbard correction,\n  DFT+U+V Hubbard correction,\n]\nUsage_Conditions:\n\"(only for DFT+U or DFT+U+V)\"\nParameter_Value_Conditions: None\nFinal_comments:\n\"Note: Hubbard U and V can be computed using the HP code which is based on density-functional perturbation theory, and it gives exactly the same result as the method of Cococcioni and de Gironcoli.\"\nNamelist:\n\"&SYSTEM\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"w_2\"\nDefault_Values:\n{\n  default:\n\"0.5D0\"\n}\nDescription:\n\"w_2\nParameters used in line search based on the Wolfe conditions.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"nsolv\"\nDefault_Values:\n{\n  default: None\n}\nDescription:\n\"nsolv\nThe number of solvents (i.e. molecular species) in the unit cell\"\nPossible_Usage_Conditions: [\n  RISM calculations,\n]\nUsage_Conditions:\n\"Only if trism = .TRUE.\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&RISM\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"bfgs_ndim\"\nDefault_Values:\n{\n  default:\n1\n}\nDescription:\n\"bfgs_ndim\nNumber of old forces and displacements vectors used in the PULAY mixing of the residual vectors obtained on the basis of the inverse hessian matrix given by the BFGS algorithm. When bfgs_ndim = 1, the standard quasi-Newton BFGS method is used.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions:\n{\n  1:\n\"standard quasi-Newton BFGS method is used\"\n}\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nCard_Name:\n\"HUBBARD\"\nNamelist:\n\"Card: HUBBARD\"\nDescription:\n\"The HUBBARD card is used to define the parameters for 'DFT+U', 'DFT+U+J', and 'DFT+U+V' calculations. These approaches are used to correct the electronic structure in systems where strongly correlated electrons are present, typically in transition metals and rare-earth elements.\"\nFinal_comments: None\nPossible_Usage_Conditions: [\n  DFT+U Hubbard correction,\n  DFT+U+J Hubbard correction,\n  DFT+U+V Hubbard correction,\n]\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nCard_Name:\n\"CONSTRAINTS\"\nNamelist:\n\"Card: CONSTRAINTS\"\nDescription:\n\"Used to impose specific geometric constraints during molecular dynamics simulations or constrained optimization processes. These constraints can apply to distances, angles, or coordination numbers between atoms.\"\nFinal_comments: None\nPossible_Usage_Conditions: [\n  ion_dynamics = 'verlet',\n  ion_dynamics = 'damp',\n]\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"refold_pos\"\nDefault_Values:\n{\n  default:\nFalse\n}\nDescription:\n\"refold_pos\nIf true the ions are refolded at each step into the supercell.\"\nPossible_Usage_Conditions: [\n  calculation = 'md',\n  calculation = 'relax',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'damp',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md'. Applies only in the case of calculation = 'md' or damped dynamics (ion_dynamics = 'damp')\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n",
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nFor the following project and the assigned tags, select the appropriate value for the parameter:\n<Project>\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</Project>\n\n<Conditions>\nGradient-corrected functionals\nultrasoft pseudopotentials\nion_dynamics = 'damp'\nnorm-conserving pseudopotentials\nExchange-correlation functional\nion_dynamics = 'bfgs'\noccupations = 'from_input'\nFixed occupations\nstarting_magnetization=0.0\nion_dynamics = 'fire'\nHybrid functional calculations\ninput_dft='PBE0', 'B3LYP'\nnspin = 2\nTransition Metals\nlspinorb = .True.\ncalculation = 'scf'\nHybrid functionals with exact exchange\nnspin = 1\nGround state calculations\nDFT+U+J Hubbard correction\nPeriodic systems\nion_dynamics = 'verlet'\nibrav-defined crystal structure\nDFT+U+V Hubbard correction\ncharge density calculations\nUPF pseudopotentials\nHigh symmetry systems\nFixed cell calculations\nDFT+U Hubbard correction\ntotal energy calculations\n</Conditions>\n\n<Parameter>\nParameter_Name:\n\"trust_radius_max\"\nDefault_Values:\n{\n  default:\n\"0.8D0\"\n}\nDescription:\n\"trust_radius_max\nMaximum ionic displacement in the structural relaxation.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"\n</Parameter>\n\n<RULES>\n- The type of calculation is important and they are two types. Singlestep: 'scf', 'nscf', 'bands', and Multistep: 'relax', 'vc-relax', 'md', 'vc-md'.\n- The tags must be relevant to the calculation type.\n- Do not assume any additional information beyond the provided project and tags.\n\n</RULES>\n\n<Ouput>\n- First discuss the relation between the parameter and the project, using most recent research and documentation.\n- Determine if the parameter is relevant to the project.\n- If the parameter is relevant, select the appropriate value from the list below.\n- Create one python dictionary called 'parameter_value' with the parameter's name as the key (str) and the value as the value of the parameter (str).\n- If the parameter is not relevant, set the value to None.\n- Put the dictionary between ```python and ```.\n</Output>\n\nMake sure to follow the rules and provide the output in the specified format.\n"
+        ],
+        "parameters_collection": [],
+        "evaluated_parameters": [
+            "Based on the provided project and tags, let's analyze the parameter \"fire_f_dec\".\n\nThe parameter \"fire_f_dec\" is related to the ion dynamics algorithm \"fire\", which is used for molecular dynamics and relaxation calculations. The \"fire\" algorithm is a robust and efficient method for optimizing atomic positions and cell parameters.\n\nIn the project, the calculation type is \"scf\", which is a single-step calculation. However, the ion dynamics is set to \"fire\", which is typically used for multistep calculations such as relaxation or molecular dynamics.\n\nAccording to the rules, the parameter \"fire_f_dec\" is relevant when the calculation type is \"relax\", \"md\", \"vc-relax\", or \"vc-md\" and the ion dynamics is \"fire\". Since the calculation type in the project is \"scf\", which does not match the usage conditions, the parameter \"fire_f_dec\" is not relevant to the project.\n\n```python\nparameter_value = {\n    \"fire_f_dec\": None\n}\n```\n\nNote that the default value of \"fire_f_dec\" is \"0.5D0\", but since the parameter is not relevant to the project, we set its value to None.",
+            "Based on the provided project and tags, let's analyze the parameter \"bfgs_ndim\".\n\nThe project is a Quantum ESPRESSO input file for a ground-state calculation of a periodic system with a fixed cell, using a hybrid functional (PBE0) and ultrasoft pseudopotentials. The calculation type is 'scf', which is a single-step calculation.\n\nThe parameter \"bfgs_ndim\" is related to the BFGS algorithm used in ion dynamics. However, the project specifies `ion_dynamics = 'damp'`, which is not one of the usage conditions for \"bfgs_ndim\" (which requires `ion_dynamics = 'bfgs'`). Therefore, the parameter \"bfgs_ndim\" is not relevant to this project.\n\n```python\nparameter_value = {\"bfgs_ndim\": None}\n```"
+        ],
+        "evaluated_parameters_graph": {
+            "directed": true,
+            "multigraph": false,
+            "graph": {},
+            "nodes": [],
+            "edges": []
+        },
+        "trimmed_documentation": [
+            {
+                "Parameter_Name": "calculation",
+                "Value_Type": "character",
+                "Default_Values": {
+                    "default": "scf"
+                },
+                "Description": "calculation\nA string describing the task to be performed",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'scf'",
+                    "calculation = 'nscf'",
+                    "calculation = 'bands'",
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "Fixed cell calculations",
+                    "Variable cell calculations"
+                ],
+                "Required/Optional": "required",
+                "Usage_Conditions": null,
+                "Parameter_Value_Conditions": {
+                    "scf": "standard calculation",
+                    "nscf": null,
+                    "bands": null,
+                    "relax": "only the atomic positions are allowed to vary",
+                    "md": "ab-initio molecular dynamics (MD) simulations",
+                    "vc-relax": "allows to vary both the atomic positions and lattice constants",
+                    "vc-md": "molecular dynamics (MD) simulations, vary both the atomic positions and lattice constants (vc = variable-cell)"
+                },
+                "Relationships_Conditions_to_Other_Parameters_Cards": {},
+                "Final_comments": null,
+                "Namelist": "&CONTROL"
+            },
+            {
+                "Parameter_Name": "ntyp",
+                "Value_Type": "integer",
+                "Default_Values": {
+                    "default": null
+                },
+                "Description": "ntyp\nnumber of types of atoms in the unit cell",
+                "Possible_Usage_Conditions": [],
+                "Required/Optional": "required",
+                "Usage_Conditions": null,
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {},
+                "Final_comments": null,
+                "Namelist": "&SYSTEM"
+            },
+            {
+                "Parameter_Name": "nr1, nr2, nr3",
+                "Value_Type": "integer",
+                "Default_Values": {
+                    "default": null
+                },
+                "Description": "nr1, nr2, nr3\nThree-dimensional FFT mesh (hard grid) for charge density (and scf potential)",
+                "Possible_Usage_Conditions": [
+                    "charge density calculations",
+                    "Hard FFT grid"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "If not specified the grid is calculated based on the cutoff for charge density (see also ecutrho)",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "ecutrho": "grid is calculated based on ecutrho if nr1,nr2,nr3 not specified"
+                },
+                "Final_comments": "all three dimensions should be set, to use this parameter",
+                "Namelist": "&SYSTEM"
+            },
+            {
+                "Parameter_Name": "Hubbard_alpha",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": "0.D0 for all species"
+                },
+                "Description": "Hubbard_alpha(i), i=1,ntyp\nHubbard_alpha(i) is the perturbation (on atom i, in eV) used to compute U (and V) with the linear-response method.",
+                "Possible_Usage_Conditions": [
+                    "Linear-response calculations",
+                    "HP code calculations",
+                    "DFT+U Hubbard correction",
+                    "DFT+U+V Hubbard correction"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "(only for DFT+U or DFT+U+V)",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {},
+                "Final_comments": "Note: Hubbard U and V can be computed using the HP code which is based on density-functional perturbation theory, and it gives exactly the same result as the method of Cococcioni and de Gironcoli.",
+                "Namelist": "&SYSTEM"
+            },
+            {
+                "Parameter_Name": "conv_thr",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": "1.D-6"
+                },
+                "Description": "conv_thr\nConvergence threshold for selfconsistency, estimated energy error < conv_thr (note that conv_thr is extensive, like the total energy)",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'scf'",
+                    "calculation = 'nscf'"
+                ],
+                "Required/Optional": "required",
+                "Usage_Conditions": "Used in self-consistent calculations ('scf') for convergence threshold. For non-self-consistent calculations ('nscf'), used to set default threshold value for iterative diagonalization",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "diago_thr_init": "In nscf calculations, conv_thr is used to set the default value of the threshold (ethr) for iterative diagonalization"
+                },
+                "Final_comments": null,
+                "Namelist": "&ELECTRONS"
+            },
+            {
+                "Parameter_Name": "ion_positions",
+                "Value_Type": "character",
+                "Default_Values": {
+                    "default": "default"
+                },
+                "Description": "ion_positions\nControls how atomic positions are determined, either from restart file or standard input depending on the option chosen",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'"
+                ],
+                "Required/Optional": "required",
+                "Usage_Conditions": "",
+                "Parameter_Value_Conditions": {
+                    "default": "if restarting, use atomic positions read from the restart file; in all other cases, use atomic positions from standard input",
+                    "from_input": "read atomic positions from standard input, even if restarting"
+                },
+                "Relationships_Conditions_to_Other_Parameters_Cards": {},
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "refold_pos",
+                "Value_Type": "logical",
+                "Default_Values": {
+                    "default": false
+                },
+                "Description": "refold_pos\nIf true the ions are refolded at each step into the supercell.",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'md'",
+                    "calculation = 'relax'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "ion_dynamics = 'damp'"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md'. Applies only in the case of calculation = 'md' or damped dynamics (ion_dynamics = 'damp')",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "calculation": "must be 'md' or ion_dynamics must be 'damp'",
+                    "ion_dynamics": "can be 'damp'"
+                },
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "upscale",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": "100.D0"
+                },
+                "Description": "upscale\nMax reduction factor for 'conv_thr' during structural optimization",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "ion_dynamics = 'bfgs'"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "conv_thr": "'conv_thr' is automatically reduced when the relaxation approaches convergence so that forces are still accurate, but 'conv_thr' will not be reduced to less that conv_thr / upscale"
+                },
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "bfgs_ndim",
+                "Value_Type": "integer",
+                "Default_Values": {
+                    "default": 1
+                },
+                "Description": "bfgs_ndim\nNumber of old forces and displacements vectors used in the PULAY mixing of the residual vectors obtained on the basis of the inverse hessian matrix given by the BFGS algorithm. When bfgs_ndim = 1, the standard quasi-Newton BFGS method is used.",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "ion_dynamics = 'bfgs'"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'",
+                "Parameter_Value_Conditions": {
+                    "1": "standard quasi-Newton BFGS method is used"
+                },
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "calculation": "must be one of: 'relax', 'md', 'vc-relax', or 'vc-md'",
+                    "ion_dynamics": "must be 'bfgs'"
+                },
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "trust_radius_max",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": "0.8D0"
+                },
+                "Description": "trust_radius_max\nMaximum ionic displacement in the structural relaxation.",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "ion_dynamics = 'bfgs'"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "calculation": "must be one of: 'relax', 'md', 'vc-relax', or 'vc-md'",
+                    "ion_dynamics": "must be 'bfgs'"
+                },
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "trust_radius_min",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": "1.D-3"
+                },
+                "Description": "trust_radius_min\nMinimum ionic displacement in the structural relaxation",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "ion_dynamics = 'bfgs'"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'",
+                "Parameter_Value_Conditions": {
+                    "trust_radius < trust_radius_min": "BFGS is reset"
+                },
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "ion_dynamics": "must be bfgs",
+                    "calculation": "must be one of: relax, md, vc-relax, or vc-md"
+                },
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "trust_radius_ini",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": "0.5D0"
+                },
+                "Description": "trust_radius_ini\nInitial ionic displacement in the structural relaxation.",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "ion_dynamics = 'bfgs'"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "calculation": "must be one of: 'relax', 'md', 'vc-relax', or 'vc-md'",
+                    "ion_dynamics": "must be 'bfgs'"
+                },
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "w_1",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": "0.01D0"
+                },
+                "Description": "w_1\nParameters used in line search based on the Wolfe conditions.",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "ion_dynamics = 'bfgs'"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "ion_dynamics": "must be 'bfgs'"
+                },
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "w_2",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": "0.5D0"
+                },
+                "Description": "w_2\nParameters used in line search based on the Wolfe conditions.",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "ion_dynamics = 'bfgs'"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "calculation": "must be one of: 'relax', 'md', 'vc-relax', or 'vc-md'",
+                    "ion_dynamics": "must be 'bfgs'"
+                },
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "fire_f_inc",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": "1.1D0"
+                },
+                "Description": "fire_f_inc\nFactor for increasing 'dt'",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "ion_dynamics = 'fire'"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'fire'",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "ion_dynamics": "must be 'fire'",
+                    "calculation": "must be one of: 'relax', 'md', 'vc-relax', or 'vc-md'"
+                },
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "fire_f_dec",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": "0.5D0"
+                },
+                "Description": "fire_f_dec\nFactor for decreasing 'dt'",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "calculation = 'vc-relax'",
+                    "calculation = 'vc-md'",
+                    "ion_dynamics = 'fire'"
+                ],
+                "Required/Optional": "optional",
+                "Usage_Conditions": "relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'fire'",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "ion_dynamics": "must be 'fire'",
+                    "calculation": "must be one of: 'relax', 'md', 'vc-relax', or 'vc-md'"
+                },
+                "Final_comments": null,
+                "Namelist": "&IONS"
+            },
+            {
+                "Parameter_Name": "fcp_mu",
+                "Value_Type": "real",
+                "Default_Values": {
+                    "default": null
+                },
+                "Description": "fcp_mu\nThe target Fermi energy (eV). Fictitious Charge Particle (FCP) The FCP method introduces a fictitious particle with an assigned charge to facilitate simulations under constant chemical potential conditions.",
+                "Possible_Usage_Conditions": [
+                    "calculation = 'relax'",
+                    "calculation = 'md'",
+                    "FCP calculations",
+                    "constant chemical potential conditions"
+                ],
+                "Required/Optional": "required",
+                "Usage_Conditions": "Only if lfcp = .TRUE.",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "lfcp": "must be .TRUE."
+                },
+                "Final_comments": null,
+                "Namelist": "&FCP"
+            },
+            {
+                "Parameter_Name": "nsolv",
+                "Value_Type": "integer",
+                "Default_Values": {
+                    "default": null
+                },
+                "Description": "nsolv\nThe number of solvents (i.e. molecular species) in the unit cell",
+                "Possible_Usage_Conditions": [
+                    "RISM calculations"
+                ],
+                "Required/Optional": "required",
+                "Usage_Conditions": "Only if trism = .TRUE.",
+                "Parameter_Value_Conditions": null,
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "trism": "must be .TRUE."
+                },
+                "Final_comments": null,
+                "Namelist": "&RISM"
+            },
+            {
+                "Card_Name": "CONSTRAINTS",
+                "Namelist": "Card: CONSTRAINTS",
+                "Required/Optional": "optional",
+                "Card_Options": [
+                    "type_coord",
+                    "atom_coord",
+                    "distance",
+                    "planar_angle",
+                    "torsional_angle",
+                    "bennett_proj",
+                    "potential_wall"
+                ],
+                "Default_Option": null,
+                "Description": "Used to impose specific geometric constraints during molecular dynamics simulations or constrained optimization processes. These constraints can apply to distances, angles, or coordination numbers between atoms.",
+                "Card_Use_Conditions": {
+                    "calculation": [
+                        "calculation = 'relax'",
+                        "calculation = 'md'"
+                    ],
+                    "ion_dynamics": [
+                        "damp",
+                        "verlet"
+                    ],
+                    "not_compatible": [
+                        "calculation = 'vc-relax'",
+                        "calculation = 'vc-md'"
+                    ]
+                },
+                "Card_Option_Given_Conditions": null,
+                "Syntax_Given_Option": {
+                    "type_coord": "constr_type type_coord constr(1) constr(2) constr(3) constr(4)",
+                    "atom_coord": "constr_type atom_coord constr(1) constr(2) constr(3) constr(4)",
+                    "distance": "constr_type distance constr(1) constr(2) constr_target",
+                    "planar_angle": "constr_type planar_angle constr(1) constr(2) constr(3) constr_target",
+                    "torsional_angle": "constr_type torsional_angle constr(1) constr(2) constr(3) constr(4) constr_target",
+                    "bennett_proj": "constr_type bennett_proj constr(1) constr(2) constr(3) constr(4)",
+                    "potential_wall": "constr_type potential_wall constr(1) constr(2) constr(3)"
+                },
+                "Item_Description": {
+                    "nconstr": "The total number of constraints to be applied",
+                    "constr_tol": "Optional tolerance value for how strictly constraints should be enforced",
+                    "constr_type": "Type of constraint"
+                },
+                "Item_Conditions": null,
+                "General_Syntax": "CONSTRAINTS\nnconstr   { constr_tol   }\nconstr_type(1) \t constr(1)(1) \t constr(2)(1) \t[\t constr(3)(1)  \t constr(4)(1)  \t]\t{\t constr_target(1) \t}\nconstr_type(2) \t constr(1)(2) \t constr(2)(2) \t[\t constr(3)(2)  \t constr(4)(2)  \t]\t{\t constr_target(2) \t}\nconstr_type(nconstr) \t constr(1)(nconstr) \t constr(2)(nconstr) \t[\t constr(3)(nconstr)  \t constr(4)(nconstr)  \t]\t{\t constr_target(nconstr) \t}",
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "ion_dynamics": "must be set to 'damp' or 'verlet'"
+                },
+                "Final_comments": null,
+                "Possible_Usage_Conditions": [
+                    "ion_dynamics = 'verlet'",
+                    "ion_dynamics = 'damp'"
+                ]
+            },
+            {
+                "Card_Name": "HUBBARD",
+                "Namelist": "Card: HUBBARD",
+                "Required/Optional": null,
+                "Card_Options": [
+                    "atomic",
+                    "ortho-atomic",
+                    "norm-atomic",
+                    "wf",
+                    "pseudo"
+                ],
+                "Default_Option": null,
+                "Description": "The HUBBARD card is used to define the parameters for 'DFT+U', 'DFT+U+J', and 'DFT+U+V' calculations. These approaches are used to correct the electronic structure in systems where strongly correlated electrons are present, typically in transition metals and rare-earth elements.",
+                "Card_Use_Conditions": {
+                    "DFT+U": "When using standard DFT+U calculation",
+                    "DFT+U+J": "When using DFT+U+J calculation",
+                    "DFT+U+V": "When using DFT+U+V calculation"
+                },
+                "Card_Option_Given_Conditions": {
+                    "atomic": "Uses atomic orbitals (from pseudopotential). With Forces and stress.",
+                    "ortho-atomic": "Uses Lowdin orthogonalized atomic orbitals (recommended to avoid double counting Hubbard corrections). With Forces and stress.",
+                    "norm-atomic": "Uses normalized atomic orbitals (without orthogonalization). Without Forces and stress.",
+                    "wf": "Uses Wannier functions to build Hubbard projectors (not maximally localized). Without Forces and stress.",
+                    "pseudo": "Uses pseudopotential projectors (requires all-electron atomic orbitals). With Forces and stress."
+                },
+                "Syntax_Given_Option": {
+                    "DFT+U": "HUBBARD atomic | ortho-atomic | norm-atomic | wf | pseudo\nU  label(1)-manifold(1)  u_val(1)\n[ J0  label(1)-manifold(1)  j0_val(1) ]\nU  label(n)-manifold(n)  u_val(n)\n[ J0  label(n)-manifold(n)  j0_val(n) ]",
+                    "DFT+U+J": "HUBBARD atomic | ortho-atomic | norm-atomic | wf | pseudo\nparamType(1)  label(1)-manifold(1)  paramValue(1)\nparamType(n)  label(n)-manifold(n)  paramValue(n)",
+                    "DFT+U+V": "HUBBARD atomic | ortho-atomic | norm-atomic | wf | pseudo\nU  label(I)-manifold(I)  u_val(I)\n[ J0  label(I)-manifold(I)  j0_val(I) ]\nV  label(I)-manifold(I)  label(J)-manifold(J)  I  J  v_val(I,J)\nU  label(N)-manifold(N)  u_val(N)\n[ J0  label(N)-manifold(N)  j0_val(N) ]\nV  label(N)-manifold(N)  label(M)-manifold(M)  N  M  v_val(N,M)"
+                },
+                "Item_Description": {
+                    "U": "Specifies the U parameter",
+                    "label": "Atom label (as defined in ATOMIC_SPECIES)",
+                    "manifold": "Specifies the atomic manifold (e.g., 3d, 2p)",
+                    "u_val": "Value of the U parameter (in eV)",
+                    "J0": "Specifies the J0 parameter",
+                    "j0_val": "Value of the J0 parameter (in eV)",
+                    "paramType": "Type of Hubbard parameter (U, J, B, E2, E3)",
+                    "paramValue": "Value of the parameter (in eV)",
+                    "V": "Specifies the V parameter (interaction between two atoms)",
+                    "v_val": "Value of the V parameter (in eV)"
+                },
+                "Item_Conditions": {
+                    "J0": "Optional parameter",
+                    "j0_val": "Required when J0 is specified"
+                },
+                "General_Syntax": "HUBBARD atomic | ortho-atomic | norm-atomic | wf | pseudo",
+                "Relationships_Conditions_to_Other_Parameters_Cards": {
+                    "ATOMIC_SPECIES": "Atom labels must be defined in ATOMIC_SPECIES"
+                },
+                "Final_comments": null,
+                "Possible_Usage_Conditions": [
+                    "DFT+U Hubbard correction",
+                    "DFT+U+J Hubbard correction",
+                    "DFT+U+V Hubbard correction"
+                ]
+            }
+        ],
+        "trimmed_documentation_string": [
+            "Parameter_Name:\n\"upscale\"\nDefault_Values:\n{\n  default:\n\"100.D0\"\n}\nDescription:\n\"upscale\nMax reduction factor for 'conv_thr' during structural optimization\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"",
+            "Parameter_Name:\n\"w_1\"\nDefault_Values:\n{\n  default:\n\"0.01D0\"\n}\nDescription:\n\"w_1\nParameters used in line search based on the Wolfe conditions.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"",
+            "Parameter_Name:\n\"ion_positions\"\nDefault_Values:\n{\n  default:\n\"default\"\n}\nDescription:\n\"ion_positions\nControls how atomic positions are determined, either from restart file or standard input depending on the option chosen\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n]\nUsage_Conditions:\n\"\"\nParameter_Value_Conditions:\n{\n  default:\n\"if restarting, use atomic positions read from the restart file; in all other cases, use atomic positions from standard input\"\n  from_input:\n\"read atomic positions from standard input, even if restarting\"\n}\nFinal_comments: None\nNamelist:\n\"&IONS\"",
+            "Parameter_Name:\n\"trust_radius_ini\"\nDefault_Values:\n{\n  default:\n\"0.5D0\"\n}\nDescription:\n\"trust_radius_ini\nInitial ionic displacement in the structural relaxation.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"",
+            "Parameter_Name:\n\"trust_radius_min\"\nDefault_Values:\n{\n  default:\n\"1.D-3\"\n}\nDescription:\n\"trust_radius_min\nMinimum ionic displacement in the structural relaxation\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions:\n{\n  trust_radius < trust_radius_min:\n\"BFGS is reset\"\n}\nFinal_comments: None\nNamelist:\n\"&IONS\"",
+            "Parameter_Name:\n\"nr1, nr2, nr3\"\nDefault_Values:\n{\n  default: None\n}\nDescription:\n\"nr1, nr2, nr3\nThree-dimensional FFT mesh (hard grid) for charge density (and scf potential)\"\nPossible_Usage_Conditions: [\n  charge density calculations,\n  Hard FFT grid,\n]\nUsage_Conditions:\n\"If not specified the grid is calculated based on the cutoff for charge density (see also ecutrho)\"\nParameter_Value_Conditions: None\nFinal_comments:\n\"all three dimensions should be set, to use this parameter\"\nNamelist:\n\"&SYSTEM\"",
+            "Parameter_Name:\n\"ntyp\"\nDefault_Values:\n{\n  default: None\n}\nDescription:\n\"ntyp\nnumber of types of atoms in the unit cell\"\nPossible_Usage_Conditions: [\n]\nUsage_Conditions: None\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&SYSTEM\"",
+            "Parameter_Name:\n\"calculation\"\nDefault_Values:\n{\n  default:\n\"scf\"\n}\nDescription:\n\"calculation\nA string describing the task to be performed\"\nPossible_Usage_Conditions: [\n  calculation = 'scf',\n  calculation = 'nscf',\n  calculation = 'bands',\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  Fixed cell calculations,\n  Variable cell calculations,\n]\nUsage_Conditions: None\nParameter_Value_Conditions:\n{\n  scf:\n\"standard calculation\"\n  nscf: None\n  bands: None\n  relax:\n\"only the atomic positions are allowed to vary\"\n  md:\n\"ab-initio molecular dynamics (MD) simulations\"\n  vc-relax:\n\"allows to vary both the atomic positions and lattice constants\"\n  vc-md:\n\"molecular dynamics (MD) simulations, vary both the atomic positions and lattice constants (vc = variable-cell)\"\n}\nFinal_comments: None\nNamelist:\n\"&CONTROL\"",
+            "Parameter_Name:\n\"fcp_mu\"\nDefault_Values:\n{\n  default: None\n}\nDescription:\n\"fcp_mu\nThe target Fermi energy (eV). Fictitious Charge Particle (FCP) The FCP method introduces a fictitious particle with an assigned charge to facilitate simulations under constant chemical potential conditions.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  FCP calculations,\n  constant chemical potential conditions,\n]\nUsage_Conditions:\n\"Only if lfcp = .TRUE.\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&FCP\"",
+            "Parameter_Name:\n\"fire_f_dec\"\nDefault_Values:\n{\n  default:\n\"0.5D0\"\n}\nDescription:\n\"fire_f_dec\nFactor for decreasing 'dt'\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'fire',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'fire'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"",
+            "Parameter_Name:\n\"conv_thr\"\nDefault_Values:\n{\n  default:\n\"1.D-6\"\n}\nDescription:\n\"conv_thr\nConvergence threshold for selfconsistency, estimated energy error < conv_thr (note that conv_thr is extensive, like the total energy)\"\nPossible_Usage_Conditions: [\n  calculation = 'scf',\n  calculation = 'nscf',\n]\nUsage_Conditions:\n\"Used in self-consistent calculations ('scf') for convergence threshold. For non-self-consistent calculations ('nscf'), used to set default threshold value for iterative diagonalization\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&ELECTRONS\"",
+            "Parameter_Name:\n\"fire_f_inc\"\nDefault_Values:\n{\n  default:\n\"1.1D0\"\n}\nDescription:\n\"fire_f_inc\nFactor for increasing 'dt'\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'fire',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'fire'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"",
+            "Parameter_Name:\n\"Hubbard_alpha\"\nDefault_Values:\n{\n  default:\n\"0.D0 for all species\"\n}\nDescription:\n\"Hubbard_alpha(i), i=1,ntyp\nHubbard_alpha(i) is the perturbation (on atom i, in eV) used to compute U (and V) with the linear-response method.\"\nPossible_Usage_Conditions: [\n  Linear-response calculations,\n  HP code calculations,\n  DFT+U Hubbard correction,\n  DFT+U+V Hubbard correction,\n]\nUsage_Conditions:\n\"(only for DFT+U or DFT+U+V)\"\nParameter_Value_Conditions: None\nFinal_comments:\n\"Note: Hubbard U and V can be computed using the HP code which is based on density-functional perturbation theory, and it gives exactly the same result as the method of Cococcioni and de Gironcoli.\"\nNamelist:\n\"&SYSTEM\"",
+            "Parameter_Name:\n\"w_2\"\nDefault_Values:\n{\n  default:\n\"0.5D0\"\n}\nDescription:\n\"w_2\nParameters used in line search based on the Wolfe conditions.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"",
+            "Parameter_Name:\n\"nsolv\"\nDefault_Values:\n{\n  default: None\n}\nDescription:\n\"nsolv\nThe number of solvents (i.e. molecular species) in the unit cell\"\nPossible_Usage_Conditions: [\n  RISM calculations,\n]\nUsage_Conditions:\n\"Only if trism = .TRUE.\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&RISM\"",
+            "Parameter_Name:\n\"bfgs_ndim\"\nDefault_Values:\n{\n  default:\n1\n}\nDescription:\n\"bfgs_ndim\nNumber of old forces and displacements vectors used in the PULAY mixing of the residual vectors obtained on the basis of the inverse hessian matrix given by the BFGS algorithm. When bfgs_ndim = 1, the standard quasi-Newton BFGS method is used.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions:\n{\n  1:\n\"standard quasi-Newton BFGS method is used\"\n}\nFinal_comments: None\nNamelist:\n\"&IONS\"",
+            "Card_Name:\n\"HUBBARD\"\nNamelist:\n\"Card: HUBBARD\"\nDescription:\n\"The HUBBARD card is used to define the parameters for 'DFT+U', 'DFT+U+J', and 'DFT+U+V' calculations. These approaches are used to correct the electronic structure in systems where strongly correlated electrons are present, typically in transition metals and rare-earth elements.\"\nFinal_comments: None\nPossible_Usage_Conditions: [\n  DFT+U Hubbard correction,\n  DFT+U+J Hubbard correction,\n  DFT+U+V Hubbard correction,\n]",
+            "Card_Name:\n\"CONSTRAINTS\"\nNamelist:\n\"Card: CONSTRAINTS\"\nDescription:\n\"Used to impose specific geometric constraints during molecular dynamics simulations or constrained optimization processes. These constraints can apply to distances, angles, or coordination numbers between atoms.\"\nFinal_comments: None\nPossible_Usage_Conditions: [\n  ion_dynamics = 'verlet',\n  ion_dynamics = 'damp',\n]",
+            "Parameter_Name:\n\"refold_pos\"\nDefault_Values:\n{\n  default:\nFalse\n}\nDescription:\n\"refold_pos\nIf true the ions are refolded at each step into the supercell.\"\nPossible_Usage_Conditions: [\n  calculation = 'md',\n  calculation = 'relax',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'damp',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md'. Applies only in the case of calculation = 'md' or damped dynamics (ion_dynamics = 'damp')\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\"",
+            "Parameter_Name:\n\"trust_radius_max\"\nDefault_Values:\n{\n  default:\n\"0.8D0\"\n}\nDescription:\n\"trust_radius_max\nMaximum ionic displacement in the structural relaxation.\"\nPossible_Usage_Conditions: [\n  calculation = 'relax',\n  calculation = 'md',\n  calculation = 'vc-relax',\n  calculation = 'vc-md',\n  ion_dynamics = 'bfgs',\n]\nUsage_Conditions:\n\"relevant when calculation = 'relax', 'md', 'vc-relax', or 'vc-md' AND ion_dynamics = 'bfgs'\"\nParameter_Value_Conditions: None\nFinal_comments: None\nNamelist:\n\"&IONS\""
+        ],
+        "qe_generation_template": "\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n",
+        "qe_initialization": "&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n",
+        "generated_input": "qe_input=QeMatch(qe_input_gen=\"&CONTROL\\n    title = 'test'\\n    pseudo_dir = '/home/ws/ec5456/VS-nano/kg_qe_tmp3/kg_qe/new_pp'\\n    outdir = '/home/ws/ec5456/VS-nano/kg_qe_tmp3/kg_qe/out_dir'\\n    calculation = 'scf'\\n/\\n\\n&SYSTEM\\n    ibrav = 0\\n    nat = 8\\n    ntyp = 2\\n    ecutwfc = 35.0\\n    ecutrho = 280.0\\n/\\n\\n&ELECTRONS\\n/\\n\\nATOMIC_SPECIES\\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\\n\\nATOMIC_POSITIONS angstrom\\nV            4.3603457071       4.1240005698       1.6616427993 \\nV           -0.0000000000       4.1240005698       0.4094562832 \\nO            1.2204383576       0.0000000000      -0.0000000000 \\nO            1.2204383576       2.7493337132      -0.0000000000 \\nO            3.1399073495       0.0000000000       2.0710990826 \\nO            3.1399073495       2.7493337132       2.0710990826 \\nO            4.3603457071       4.1240005698       4.1818511793 \\nO           -0.0000000000       4.1240005698       2.0314460686 \\n\\nK_POINTS automatic\\n13 13 13 0 0 0\\n\\nCELL_PARAMETERS angstrom\\n     -4.3603457071       2.7493337132       2.0710990826\\n      4.3603457071      -2.7493337132       2.0710990826\\n      4.3603457071       2.7493337132      -2.0710990826\\n\")",
+        "error_msg": [],
+        "log_qe_gen_prompt": [
+            "You are an AI assistant specializing in quantum chemistry calculations using Quantum ESPRESSO.\nCreate a Quantum Espresso input file for 'Ground state calculations\ntotal energy calculations\ncharge density calculations\ncalculation = 'scf'' calculation of 'V2O6' compound, based on the given CONTEXT and DETAILS.\n\n<CONTEXT>\n&CONTROL title = 'test'\n\n\n&SYSTEM ecutwfc = 35.0\n&SYSTEM ecutrho = 280.0\n&SYSTEM ibrav = 0\n&SYSTEM nat = 8\n----------\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n\n\n</CONTEXT>\n\n<DETAILS>\nCalculate a single shot calculation for VO3 using all default parameters of QE code.\n</DETAILS>\n\n<RULES>\n- Write the input file for the given calculation type\n- Set the value of the variables based on the CONTEXT and the DETAILS\n- Use only relevant parameters based on the CONTEXT, DETAILS\n- Each parameter should be under correct namelist\n- Each parameter should have a correct value type such as integer, real, character, or logical\n- The namelists &CONTROL, &SYSTEM, &ELECTRONS, must be in this order exactly\n- The cards ATOMIC_SPECIES, ATOMIC_POSITIONS, K_POINTS, and CELL_PARAMETERS must be present and based on CONTEXT and DETAILS\n- In &CONTROL should have 'pseudo_dir': /home/ws/ec5456/VS-nano/kg_qe_tmp3/kg_qe/new_pp and 'outdir':'/home/ws/ec5456/VS-nano/kg_qe_tmp3/kg_qe/out_dir' defined, according to the given CONTEXT\n</RULES>\n\n<OUTPUT>\n- Write the input file\n- Put the code blocks in ```fortran and ```.\n- Review the code to see how the generated code followed the RULES, CONTEXT, and DETAILS, then give some explanation.\n</OUTPUT>\n"
+        ],
+        "log_qe_input": [
+            "&CONTROL\n    title = 'test'\n    pseudo_dir = '/home/ws/ec5456/VS-nano/kg_qe_tmp3/kg_qe/new_pp'\n    outdir = '/home/ws/ec5456/VS-nano/kg_qe_tmp3/kg_qe/out_dir'\n    calculation = 'scf'\n/\n\n&SYSTEM\n    ibrav = 0\n    nat = 8\n    ntyp = 2\n    ecutwfc = 35.0\n    ecutrho = 280.0\n/\n\n&ELECTRONS\n/\n\nATOMIC_SPECIES\nO      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF\nV      50.9415 v_pbe_v1.4.uspp.F.UPF\n\nATOMIC_POSITIONS angstrom\nV            4.3603457071       4.1240005698       1.6616427993 \nV           -0.0000000000       4.1240005698       0.4094562832 \nO            1.2204383576       0.0000000000      -0.0000000000 \nO            1.2204383576       2.7493337132      -0.0000000000 \nO            3.1399073495       0.0000000000       2.0710990826 \nO            3.1399073495       2.7493337132       2.0710990826 \nO            4.3603457071       4.1240005698       4.1818511793 \nO           -0.0000000000       4.1240005698       2.0314460686 \n\nK_POINTS automatic\n13 13 13 0 0 0\n\nCELL_PARAMETERS angstrom\n     -4.3603457071       2.7493337132       2.0710990826\n      4.3603457071      -2.7493337132       2.0710990826\n      4.3603457071       2.7493337132      -2.0710990826\n"
+        ],
+        "log_qe_solution": [],
+        "rest_formula_data": {
+            "formula": "V2O6",
+            "k_points_2d": "None",
+            "uuid": "e38736af-09c6-439b-a9ff-0ceeb0722782",
+            "ase_atom_object": "Atoms(symbols='V2O6', pbc=True, cell=[[-4.3603457071, 2.7493337132, 2.0710990826], [4.3603457071, -2.7493337132, 2.0710990826], [4.3603457071, 2.7493337132, -2.0710990826]])",
+            "indx": "None"
+        },
+        "workflow_log": [
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Interface agent",
+                    "start_time": "2025-02-09 06:48:18"
+                },
+                "timestamp": "2025-02-09 06:48:18.159166",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Interface agent",
+                    "start_time": "2025-02-09 06:48:34"
+                },
+                "timestamp": "2025-02-09 06:48:34.009431",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:48:34",
+                    "end_time": "2025-02-09 06:48:35",
+                    "message": "Interface agent"
+                },
+                "timestamp": "2025-02-09 06:48:35.629484",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "3D structure generation",
+                    "start_time": "2025-02-09 06:48:35"
+                },
+                "timestamp": "2025-02-09 06:48:35.629570",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:48:35",
+                    "end_time": "2025-02-09 06:48:37",
+                    "message": "3D structure generation"
+                },
+                "timestamp": "2025-02-09 06:48:37.134330",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Starting Quantum Espresso documentation collection",
+                    "start_time": "2025-02-09 06:48:37"
+                },
+                "timestamp": "2025-02-09 06:48:37.134412",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:48:37",
+                    "end_time": "2025-02-09 06:48:38",
+                    "message": "Quantum Espresso documentation collection"
+                },
+                "timestamp": "2025-02-09 06:48:38.467345",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso condition extraction",
+                    "start_time": "2025-02-09 06:48:38"
+                },
+                "timestamp": "2025-02-09 06:48:38.467393",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.ERROR",
+                    "start_time": "2025-02-09 06:48:38",
+                    "end_time": "2025-02-09 06:49:21",
+                    "message": "Quantum Espresso condition extraction: - No valid data extracted"
+                },
+                "timestamp": "2025-02-09 06:49:21.072652",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso condition extraction",
+                    "start_time": "2025-02-09 06:49:31"
+                },
+                "timestamp": "2025-02-09 06:49:31.083450",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:49:31",
+                    "end_time": "2025-02-09 06:50:14",
+                    "message": "Quantum Espresso condition extraction"
+                },
+                "timestamp": "2025-02-09 06:50:14.175817",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Parameter graph generation",
+                    "start_time": "2025-02-09 06:50:14"
+                },
+                "timestamp": "2025-02-09 06:50:14.175921",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:50:14",
+                    "end_time": "2025-02-09 06:50:14",
+                    "message": "Parameter graph generation"
+                },
+                "timestamp": "2025-02-09 06:50:14.178536",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Documentation collection for trimmed parameters",
+                    "start_time": "2025-02-09 06:50:14"
+                },
+                "timestamp": "2025-02-09 06:50:14.178592",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:50:14",
+                    "end_time": "2025-02-09 06:50:14",
+                    "message": "Documentation collection for trimmed parameters"
+                },
+                "timestamp": "2025-02-09 06:50:14.179437",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso input parameter evaluation",
+                    "start_time": "2025-02-09 06:50:14"
+                },
+                "timestamp": "2025-02-09 06:50:14.179483",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:50:14",
+                    "end_time": "2025-02-09 06:50:59",
+                    "message": "Quantum Espresso input parameter evaluation"
+                },
+                "timestamp": "2025-02-09 06:50:59.646683",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso input generation template",
+                    "start_time": "2025-02-09 06:50:59"
+                },
+                "timestamp": "2025-02-09 06:50:59.646913",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.RETRY",
+                    "start_time": "2025-02-09 06:50:59",
+                    "message": "Quantum Espresso input generation template"
+                },
+                "timestamp": "2025-02-09 06:50:59.648701",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso input generation template",
+                    "start_time": "2025-02-09 06:51:09"
+                },
+                "timestamp": "2025-02-09 06:51:09.659307",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.RETRY",
+                    "start_time": "2025-02-09 06:51:09",
+                    "message": "Quantum Espresso input generation template"
+                },
+                "timestamp": "2025-02-09 06:51:09.661189",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso input generation template",
+                    "start_time": "2025-02-09 06:51:19"
+                },
+                "timestamp": "2025-02-09 06:51:19.671436",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.RETRY",
+                    "start_time": "2025-02-09 06:51:19",
+                    "message": "Quantum Espresso input generation template"
+                },
+                "timestamp": "2025-02-09 06:51:19.673421",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso input generation template",
+                    "start_time": "2025-02-09 06:51:29"
+                },
+                "timestamp": "2025-02-09 06:51:29.683954",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.RETRY",
+                    "start_time": "2025-02-09 06:51:29",
+                    "message": "Quantum Espresso input generation template"
+                },
+                "timestamp": "2025-02-09 06:51:29.685759",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso input parameter evaluation",
+                    "start_time": "2025-02-09 06:51:29"
+                },
+                "timestamp": "2025-02-09 06:51:29.685840",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:51:29",
+                    "end_time": "2025-02-09 06:52:06",
+                    "message": "Quantum Espresso input parameter evaluation"
+                },
+                "timestamp": "2025-02-09 06:52:06.895144",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso input generation template",
+                    "start_time": "2025-02-09 06:52:06"
+                },
+                "timestamp": "2025-02-09 06:52:06.895272",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:52:06",
+                    "end_time": "2025-02-09 06:52:06",
+                    "message": "Quantum Espresso input generation template"
+                },
+                "timestamp": "2025-02-09 06:52:06.896016",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso input generation",
+                    "start_time": "2025-02-09 06:52:06"
+                },
+                "timestamp": "2025-02-09 06:52:06.896067",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:52:06",
+                    "end_time": "2025-02-09 06:52:16",
+                    "message": "Quantum Espresso input generation"
+                },
+                "timestamp": "2025-02-09 06:52:16.106914",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.PENDING",
+                    "message": "Quantum Espresso is initializing",
+                    "start_time": "2025-02-09 06:52:16"
+                },
+                "timestamp": "2025-02-09 06:52:16.107013",
+                "level": "INFO"
+            },
+            {
+                "status": "",
+                "message": {
+                    "status": "WorkflowStatus.SUCCESS",
+                    "start_time": "2025-02-09 06:52:16",
+                    "end_time": "2025-02-09 06:53:16",
+                    "message": "Quantum Espresso calculation completed successfully"
+                },
+                "timestamp": "2025-02-09 06:53:16.350051",
+                "level": "INFO"
+            }
+        ],
+        "workflow_state": "FINISHED"
+    }
+]

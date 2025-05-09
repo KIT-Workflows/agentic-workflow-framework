@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parameter Relationships Visualization</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Cytoscape.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+    <!-- Layout extensions -->
+    <script src="https://unpkg.com/layout-base/layout-base.js"></script>
+    <script src="https://unpkg.com/cose-base/cose-base.js"></script>
+    <script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    <!-- Add cytoscape-svg extension -->
+    <script src="https://unpkg.com/cytoscape-svg/cytoscape-svg.js"></script>
+    <style>
+        .json-key { color: #59b6ec; }
+        .json-string { color: #a8ff60; }
+        .json-number { color: #ff9d00; }
+        .json-boolean { color: #ff628c; }
+        .json-null { color: #ff628c; }
+        
+        #graph-legend {
+            z-index: 1000;
+            font-size: 0.75rem;
+            line-height: 1rem;
+        }
+        
+        #graph-legend::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        #graph-legend::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        #graph-legend::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 2px;
+        }
+        
+        #graph-legend::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Controls Panel -->
+    <div id="controls" class="fixed top-0 left-0 right-0 bg-white shadow-md p-4 z-10 flex items-center gap-4">
+        <select id="layoutSelect" class="px-4 py-2 border rounded-md">
+            <option value="fcose">Force-Directed</option>
+            <option value="breadthfirst">Hierarchical</option>
+        </select>
+        
+        <!-- Updated search container with fixed width -->
+        <div class="search-container flex items-center gap-4">
+            <div class="relative w-64">
+                <input type="text" id="searchBox" 
+                       placeholder="Enter parameter..." 
+                       class="w-full px-4 py-2 border rounded-md">
+                <div id="searchSuggestions" 
+                     class="absolute left-0 right-0 mt-1 max-h-60 overflow-y-auto bg-white border rounded-md shadow-lg hidden z-50">
+                </div>
+            </div>
+            <!-- Export button will be inserted here by JavaScript -->
+        </div>
+        
+        <button id="searchButton" 
+                class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+            Search
+        </button>
+    </div>
+
+    <!-- Network Container -->
+    <div id="cy" class="w-full h-screen"></div>
+
+    <!-- Debug Panel -->
+    <div id="debug-panel" 
+         class="fixed bottom-4 left-4 bg-black/80 text-white rounded-lg font-mono text-sm max-w-2xl transition-all duration-300 ease-in-out"
+         style="transform: translateX(0)">
+        <div class="p-2 border-b border-gray-600 flex justify-between items-center cursor-pointer select-none hover:bg-black/40" id="debug-header">
+            <div class="flex items-center gap-2">
+                <span id="debug-toggle-icon" class="transform transition-transform duration-300">▼</span>
+                <span class="font-bold">Debug Info</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <button id="clearDebug" class="text-xs bg-red-500 px-2 py-1 rounded hover:bg-red-600 transition-colors">
+                    Clear
+                </button>
+                <span id="debug-count" class="text-xs bg-gray-700 px-2 py-1 rounded">0</span>
+            </div>
+        </div>
+        <div id="debug-content" class="p-4 max-h-60 overflow-auto">
+            Initializing...
+        </div>
+    </div>
+
+    <!-- Status Message -->
+    <div id="status-message" 
+         class="fixed top-20 left-1/2 transform -translate-x-1/2 bg-black/80 text-white px-4 py-2 rounded-md hidden">
+    </div>
+
+    <!-- Parameter Details Panel -->
+    <div id="details-panel" 
+         class="fixed top-20 left-0 bottom-4 w-96 bg-gray-900 text-white rounded-r-lg shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out overflow-hidden flex flex-col">
+        <div class="p-3 bg-gray-800 border-b border-gray-700 flex justify-between items-center">
+            <h3 class="font-bold text-lg" id="details-title">Parameter Details</h3>
+            <button id="close-details" class="text-gray-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div id="details-content" class="flex-1 overflow-auto p-4 font-mono text-sm">
+            Select a parameter to view details
+        </div>
+    </div>
+
+    <!-- Add error handling container -->
+    <div id="error-container" 
+         class="fixed top-20 left-1/2 transform -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded-md hidden">
+    </div>
+
+    <!-- Add loading indicator -->
+    <div id="loading-indicator" 
+         class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg hidden">
+        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="/static/g_vis.js"></script>
+</body>
+</html>
