@@ -222,6 +222,6 @@ The system supports development mode with auto-reload enabled. The server will a
 ## Notes
 
 - The server automatically finds an available port in the range 8001-8019
-- The system uses a knowledge graph approach for workflow organization
+- The system uses a knowledge graph approach for retrieval of relevant Quantum ESPRESSO parameters
 - Frontend templates are rendered using Jinja2
 - The system includes comprehensive logging 
