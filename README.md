@@ -215,10 +215,6 @@ For detailed technical documentation, refer to:
 - `wf-tech-doc.md`: Technical documentation
 - `eng_directory_structure.txt`: Directory structure
 
-## Development
-
-The system supports development mode with auto-reload enabled. The server will automatically restart when code changes are detected.
-
 ## Notes
 
 - The server automatically finds an available port in the range 8001-8019
