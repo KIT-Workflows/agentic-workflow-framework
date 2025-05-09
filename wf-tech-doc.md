@@ -36,7 +36,7 @@ Creates and starts a new workflow execution.
 **Request Body:**
 ```json
 {
-    "calculation_prompt": string | null,
+    "calculation_prompt": string,
     "workflow_index": integer | null,
     "gen_model_hierarchy": [
         string,
