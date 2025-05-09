@@ -3,6 +3,24 @@
 ## Overview
 This is a Quantum Engineering (QE) Workflow Management System that provides a web-based interface for managing and executing quantum engineering workflows. The system uses a knowledge graph approach for workflow organization and includes both backend and frontend components.
 
+## Showcase Videos
+
+### Knowledge Graph Interface Demo
+<video width="100%" controls>
+  <source src="kg.mov" type="video/quicktime">
+  Your browser does not support the video tag. You can [download the video](kg.mov) instead.
+</video>
+
+This video demonstrates the Knowledge Graph interface, showing how the system organizes and visualizes quantum engineering workflows using a graph-based approach.
+
+### Workflow Management Demo
+<video width="100%" controls>
+  <source src="wf.mov" type="video/quicktime">
+  Your browser does not support the video tag. You can [download the video](wf.mov) instead.
+</video>
+
+This video showcases the Workflow Management interface in action, demonstrating how users can create, manage, and execute quantum engineering workflows through the web interface.
+
 ## Project Structure
 
 ```
@@ -90,22 +108,22 @@ The installation process requires Miniconda. If you haven't installed it yet, pl
 
    Using git:
    ```bash
-   git clone <PLACEHOLDER_REPO_URL>
-   cd qe_wf
+   git clone https://github.com/KIT-Workflows/agentic-workflow-framework.git
+   cd agentic-workflow-framework
    ```
 
    Or using wget:
    ```bash
-   wget <PLACEHOLDER_REPO_URL>/archive/main.zip
+   wget https://github.com/KIT-Workflows/agentic-workflow-framework/archive/main.zip
    unzip main.zip
-   cd qe_wf-main
+   cd agentic-workflow-framework-main
    ```
 
    Or using curl:
    ```bash
-   curl -L <PLACEHOLDER_REPO_URL>/archive/main.zip --output qe_wf.zip
-   unzip qe_wf.zip
-   cd qe_wf-main
+   curl -L https://github.com/KIT-Workflows/agentic-workflow-framework/archive/main.zip --output agentic-workflow-framework.zip
+   unzip agentic-workflow-framework.zip
+   cd agentic-workflow-framework-main
    ```
 
 2. **Run the Installation Script**
