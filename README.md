@@ -7,15 +7,15 @@ This is a Quantum Engineering (QE) Workflow Management System that provides a we
 
 ### Knowledge Graph Interface Demo
 
-[![Watch the Knowledge Graph Demo](videos/kg_thumbnail.jpg)](https://youtu.be/1hlE7Wees3c)
+[![Watch the Knowledge Graph Demo on YouTube](videos/kg_thumbnail.jpg)](https://youtu.be/1hlE7Wees3c) 🎥
 
-This video demonstrates the Knowledge Graph interface, showing how the system organizes and visualizes quantum engineering workflows using a graph-based approach.
+This video showcases an interactive web interface for exploring and interacting with the Quantum ESPRESSO knowledge graph. The interface provides a dynamic visualization of Quantum ESPRESSO parameters, their relationships, and dependencies. Click the image above to watch on YouTube.
 
 ### Workflow Management Demo
 
-[![Watch the Workflow Demo](videos/wf_thumbnail.jpg)](https://youtu.be/Gf7AS_UhxX4)
+[![Watch the Workflow Demo on YouTube](videos/wf_thumbnail.jpg)](https://youtu.be/Gf7AS_UhxX4) 🎥
 
-This video showcases the Workflow Management interface in action, demonstrating how users can create, manage, and execute quantum engineering workflows through the web interface.
+This video demonstrates how to initiate, configure, and monitor Quantum ESPRESSO workflows through the web interface. It shows the step-by-step process of setting up calculations and tracking their execution status in real-time, and viewing the final results of the workflow. Click the image above to watch on YouTube.
 
 ## Project Structure
 
