@@ -1,7 +1,7 @@
 # QE Workflow Management System
 
 ## Overview
-This is a Quantum Engineering (QE) Workflow Management System that provides a web-based interface for managing and executing quantum engineering workflows. The system uses a knowledge graph approach for workflow organization and includes both backend and frontend components.
+This is a Quantum ESPRESSO (QE) Workflow Management System that provides a web-based interface for managing and executing Quantum ESPRESSO workflows. The system uses a knowledge graph approach for workflow organization and includes both backend and frontend components.
 
 ## Showcase Videos
 
