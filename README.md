@@ -1,7 +1,7 @@
 # QE Workflow Management System
 
 ## Overview
-This is a Quantum ESPRESSO (QE) Workflow Management System that provides a web-based interface for managing and executing Quantum ESPRESSO workflows. The system uses a knowledge graph approach for retireval of relevant Quantum ESPRESSO parameters and organizes the workflow using a finite state machine and includes both backend and frontend components.
+This Quantum ESPRESSO (QE) Workflow Management System provides a web-based interface for managing and executing Quantum ESPRESSO workflows. The system uses a knowledge graph approach to retrieving relevant Quantum ESPRESSO parameters, organizes the workflow using a finite state machine, and includes both backend and frontend components.
 
 ## Showcase Videos
 
@@ -9,13 +9,13 @@ This is a Quantum ESPRESSO (QE) Workflow Management System that provides a web-b
 
 [![Watch the Knowledge Graph Demo on YouTube](videos/kg_thumbnail.jpg)](https://youtu.be/1hlE7Wees3c) 🎥
 
-This video showcases an interactive web interface for exploring and interacting with the Quantum ESPRESSO knowledge graph. The interface provides a dynamic visualization of Quantum ESPRESSO parameters, their relationships, and dependencies. Click the image above to watch on YouTube.
+This video showcases an interactive web interface for exploring and interacting with the Quantum ESPRESSO knowledge graph. The interface dynamically visualizes Quantum ESPRESSO parameters, their relationships, and dependencies. Click the image above to watch on YouTube.
 
 ### Workflow Management Demo
 
 [![Watch the Workflow Demo on YouTube](videos/wf_thumbnail.jpg)](https://youtu.be/Gf7AS_UhxX4) 🎥
 
-This video demonstrates how to initiate, configure, and monitor Quantum ESPRESSO workflows through the web interface. It shows the step-by-step process of setting up calculations and tracking their execution status in real-time, and viewing the final results of the workflow. Click the image above to watch on YouTube.
+This video demonstrates initiating, configuring, and monitoring Quantum ESPRESSO workflows through the web interface. It shows the step-by-step process of setting up calculations, tracking their execution status in real time, and viewing the workflow's final results. Click the image above to watch on YouTube.
 
 ## Project Structure
 
@@ -186,7 +186,7 @@ This system comprises two main FastAPI-based server applications:
         ```
     *   **Access**: This server will also find an available port, typically starting from 8001 (and incrementing if busy), in the range 8001-8019. Check the console output for the exact port. It serves a landing page at its root (`/`) and data at `/api/data`.
 
-**Note on Ports**: Both servers attempt to find an available port in the range 8001-8019. If you run both simultaneously, they will occupy different ports from this range. Pay attention to the terminal output of each server to identify which port it is running on.
+**Note on Ports**: Both servers attempt to find an available port in the range 8001-8019. If you run both simultaneously, they will occupy different ports from this range. Pay attention to each server's terminal output to identify which port it is running on.
 
 ## Uninstallation
 
@@ -200,7 +200,7 @@ To completely remove the QE Workflow system:
 
    The script will:
    - Remove both conda environments (`qe_wf` and `qe`)
-   - Delete the entire repository directory including:
+   - Delete the entire repository directory, including:
      - All local changes
      - Configuration files (`.env`)
      - Any additional data or results
@@ -218,6 +218,6 @@ For detailed technical documentation, refer to:
 ## Notes
 
 - The server automatically finds an available port in the range 8001-8019
-- The system uses a knowledge graph approach for retrieval of relevant Quantum ESPRESSO parameters
+- The system uses a knowledge graph approach for the retrieval of relevant Quantum ESPRESSO parameters
 - Frontend templates are rendered using Jinja2
 - The system includes comprehensive logging 
