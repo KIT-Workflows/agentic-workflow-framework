@@ -219,6 +219,7 @@ For detailed technical documentation, refer to:
 ## Notes
 
 - The server automatically finds an available port in the range 8001-8019
+- In case you need to run directly from your HPC account, ssh into your account using this command: `ssh -L 8001:127.0.0.1:8001 yourusername@your.hpc.address`
 - The system uses a knowledge graph approach for the retrieval of relevant Quantum ESPRESSO parameters
 - Frontend templates are rendered using Jinja2
 - The system includes comprehensive logging 
