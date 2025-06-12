@@ -1,13 +1,7 @@
 #!/bin/bash
 
-# Check if repository URL is provided
-if [ $# -ne 1 ]; then
-    echo "Usage: $0 <repository_url>"
-    echo "Example: $0 https://github.com/username/qe_wf.git"
-    exit 1
-fi
-
-REPO_URL=$1
+# Hardcoded repository URL
+REPO_URL="https://github.com/KIT-Workflows/agentic-workflow-framework"
 REPO_NAME=$(basename "$REPO_URL" .git)
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
