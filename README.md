@@ -187,6 +187,7 @@ This system comprises two main FastAPI-based server applications:
     *   **Access**: This server will also find an available port, typically starting from 8001 (and incrementing if busy), in the range 8001-8019. Check the console output for the exact port. It serves a landing page at its root (`/`) and data at `/api/data`.
 
 **Note on Ports**: Both servers attempt to find an available port in the range 8001-8019. If you run both simultaneously, they will occupy different ports from this range. Pay attention to each server's terminal output to identify which port it is running on.
+In case you want to run from your HPC account, you can type this command: `ssh -L 8001:127.0.0.1:8001 yourusername@your.hpc.address`
 
 ## Uninstallation
 
