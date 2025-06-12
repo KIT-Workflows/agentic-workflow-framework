@@ -87,9 +87,9 @@ def prepare_for_kw_extraction(analysis_dict: dict):
 
 #items_for_workflow = items + tmp_
 
-with open('kmeans_cluster.json', 'r') as f:
-    data = json.load(f)
-
+#with open('kmeans_cluster.json', 'r') as f:
+#    data = json.load(f)
+#
 #items_for_workflow = data['Cluster 1'] + data['Cluster 2']
 
 current_dir = Path.cwd()

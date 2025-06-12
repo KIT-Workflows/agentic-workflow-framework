@@ -183,7 +183,7 @@ def main():
     
     logger.info(f"Starting server on port {port}")
     uvicorn.run(
-        "main:app",
+        "qe_knowledge_graph:app",
         host="127.0.0.1",
         port=port,
         reload=True
