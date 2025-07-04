@@ -1,0 +1,58 @@
+[
+  {
+    "subject": "Program",
+    "predicate": "is",
+    "object": "pw.x / PWscf / Quantum ESPRESSO",
+    "source": "pw.x_doc.md",
+    "namelist": "markdown"
+  },
+  {
+    "subject": "INTRODUCTION &CONTROL",
+    "predicate": "contains",
+    "object": "calculation | title | verbosity | restart_mode | wf_collect | nstep | iprint | tstress | tprnfor | dt | outdir | wfcdir | prefix | lkpoint_dir | max_seconds | etot_conv_thr | forc_conv_thr | disk_io | pseudo_dir | tefield | dipfield | lelfield | nberrycyc | lorbm | lberry | gdir | nppstr | gate | twochem | lfcp | trism",
+    "source": "pw.x_doc.md",
+    "namelist": "markdown"
+  },
+  {
+    "subject": "&SYSTEM",
+    "predicate": "contains",
+    "object": "ibrav | celldm | A | B | C | cosAB | cosAC | cosBC | nat | ntyp | nbnd | nbnd_cond | tot_charge | starting_charge | tot_magnetization | starting_magnetization | ecutwfc | ecutrho | ecutfock | nr1 | nr2 | nr3 | nr1s | nr2s | nr3s | nosym | nosym_evc | noinv | no_t_rev | force_symmorphic | use_all_frac | occupations | one_atom_occupations | starting_spin_angle | degauss_cond | nelec_cond | degauss | smearing | nspin | sic_gamma | pol_type | sic_energy | sci_vb | sci_cb | noncolin | ecfixed | qcutz | q2sigma | input_dft | ace | exx_fraction | screening_parameter | exxdiv_treatment | x_gamma_extrapolation | ecutvcut | nqx1 | nqx2 | nqx3 | localization_thr | Hubbard_occ | Hubbard_alpha | Hubbard_beta | starting_ns_eigenvalue | dmft | dmft_prefix | ensemble_energies | edir | emaxpos | eopreg | eamp | angle1 | angle2 | lforcet | constrained_magnetization | fixed_magnetization | lambda | report | lspinorb | assume_isolated | esm_bc | esm_w | esm_efield | esm_nfit | lgcscf | gcscf_mu | gcscf_conv_thr | gcscf_beta | vdw_corr | london | london_s6 | london_c6 | london_rvdw | london_rcut | dftd3_version | dftd3_threebody | ts_vdw_econv_thr | ts_vdw_isolated | xdm | xdm_a1 | xdm_a2 | space_group | uniqueb | origin_choice | rhombohedral | zgate | relaxz | block | block_1 | block_2 | block_height | nextffield",
+    "source": "pw.x_doc.md",
+    "namelist": "markdown"
+  },
+  {
+    "subject": "&ELECTRONS",
+    "predicate": "contains",
+    "object": "electron_maxstep | exx_maxstep | scf_must_converge | conv_thr | adaptive_thr | conv_thr_init | conv_thr_multi | mixing_mode | mixing_beta | mixing_ndim | mixing_fixed_ns | diagonalization | diago_thr_init | diago_cg_maxiter | diago_ppcg_maxiter | diago_david_ndim | diago_rmm_ndim | diago_rmm_conv | diago_gs_nblock | diago_full_acc | efield | efield_cart | efield_phase | startingpot | startingwfc | tqr | real_space",
+    "source": "pw.x_doc.md",
+    "namelist": "markdown"
+  },
+  {
+    "subject": "&IONS",
+    "predicate": "contains",
+    "object": "ion_positions | ion_velocities | ion_dynamics | pot_extrapolation | wfc_extrapolation | remove_rigid_rot | ion_temperature | tempw | tolp | delta_t | nraise | refold_pos | upscale | bfgs_ndim | trust_radius_max | trust_radius_min | trust_radius_ini | w_1 | w_2 | fire_alpha_init | fire_falpha | fire_nmin | fire_f_inc | fire_f_dec | fire_dtmax",
+    "source": "pw.x_doc.md",
+    "namelist": "markdown"
+  },
+  {
+    "subject": "&CELL",
+    "predicate": "contains",
+    "object": "cell_dynamics | press | wmass | cell_factor | press_conv_thr | cell_dofree",
+    "source": "pw.x_doc.md",
+    "namelist": "markdown"
+  },
+  {
+    "subject": "&FCP",
+    "predicate": "contains",
+    "object": "fcp_mu | fcp_dynamics | fcp_conv_thr | fcp_ndiis | fcp_mass | fcp_velocity | fcp_temperature | fcp_tempw | fcp_tolp | fcp_delta_t | fcp_nraise | freeze_all_atoms",
+    "source": "pw.x_doc.md",
+    "namelist": "markdown"
+  },
+  {
+    "subject": "&RISM",
+    "predicate": "contains",
+    "object": "nsolv | closure | tempv | ecutsolv | solute_lj | solute_epsilon | solute_sigma | starting1d",
+    "source": "pw.x_doc.md",
+    "namelist": "markdown"
+  }
+]

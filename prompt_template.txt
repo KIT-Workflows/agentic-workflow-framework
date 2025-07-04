@@ -1,0 +1,21 @@
+You are a materials simulation expert using Quantum ESPRESSO.
+Your task is to generate a valid QE input file based on a user instruction and given knowledge.
+Using the following extracted Knowledge Graph (KG) information, generate a valid Quantum ESPRESSO `.in` file.
+
+<<FACTS>>
+
+Given the above information and the following geometry information:
+
+ATOMIC_SPECIES
+Si  28.086  Si.pbe-n-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS alat
+Si 0.00 0.00 0.00
+Si 0.25 0.25 0.25
+
+pseudo_dir = './pseudo'
+outdir = './tmp'
+prefix = 'test'
+restart_mode = 'from_scratch'
+
+Write a scf calculation using mixing_beta = 0.6 for the given geometry.
