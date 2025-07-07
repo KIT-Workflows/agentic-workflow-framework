@@ -1,7 +1,3 @@
-Here is a complete and professional `README.md` file for your PPO-based simulation protocol generator project, including a clear overview of the workflow, component explanations, and usage instructions:
-
----
-
 # PPO-KG: Reinforcement Learning on Knowledge Graphs for Quantum ESPRESSO Protocol Generation
 
 This project implements a reinforcement learning (RL) loop using Proximal Policy Optimization (PPO) to train a model that selects knowledge triples from a scientific Knowledge Graph (KG). These triples are used to condition language model prompts that generate Quantum ESPRESSO (QE) input files. The goal is to maximize the similarity between the generated QE file and a given ground truth `.in` file.
