@@ -1,0 +1,34 @@
+ &control
+    calculation='relax'
+    restart_mode='from_scratch',!'restart', !
+    pseudo_dir = '/home/ws/gt5111/Celso_QE/SSSP_precision/',
+    outdir='/tmp/qe_tmp/'
+    prefix='o2'
+ /
+ &system
+    ibrav = 1, celldm(1) =7.50, nat= 2, ntyp= 2,
+    ecutwfc = 25.0,ecutrho = 200.0,
+    report=1,
+    occupations='smearing', smearing='marzari-vanderbilt', degauss=0.05
+    noncolin = .true.
+    starting_magnetization(1) = 0.5
+    angle1(1) = 90.0
+    angle2(1) =  0.0
+    starting_magnetization(2) = 0.5
+    angle1(2) = 90.0
+    angle2(2) =  0.0
+ /
+ &electrons
+    mixing_beta = 0.2
+ /
+ &ions
+ /
+ATOMIC_SPECIES
+ O1 16.0 O.pbe-n-kjpaw_psl.0.1.UPF
+ O2 16.0 O.pbe-n-kjpaw_psl.0.1.UPF
+ATOMIC_POSITIONS alat
+ O1 0.0 0.0 0.0
+ O2 0.20 0.20 0.20
+K_POINTS
+ 1
+   0.0 0.0 0.0 1.00
